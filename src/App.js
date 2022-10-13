@@ -1,7 +1,7 @@
 import './App.css';
-import { employees } from './index';
+import { employees } from './data';
 
-const list = ["Batu","Emre","Emir","Umut","Semih","Ömer","Arda"]
+const list = ["Batu","Emre","Emir","Umut","Semih","Ömer","Arda","Ali"];
 
 function ListWriter(){
   return(list.map((name =>
@@ -10,7 +10,7 @@ function ListWriter(){
 
 function ListWriter2(){
   return(employees.map((employee =>
-    <p>{employee.id}</p>)));
+    <p>{employee.id} - {employee.firstname} {employee.lastname}</p>)));
 }
 
 function App() {

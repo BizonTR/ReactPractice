@@ -17,8 +17,8 @@ function ListWriter2(){
 
 const handleClearAll = () => (
   console.log ("Clear All Button has been clicked."),
-  alert("ALERT"),
-  data = [] 
+  alert("ALERT")
+  //this.useState({data:[]}) 
 )
 
 function App() {

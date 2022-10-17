@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import './App.css';
-import { employees } from './data';
+import EmployeeList from './components/employeeList/EmployeeList';
+import { data } from './data';
 
 const list = ["Batu","Emre","Emir","Umut","Semih","Ömer","Arda","Ali"];
 
@@ -9,15 +11,20 @@ function ListWriter(){
 }
 
 function ListWriter2(){
-  return(employees.map((employee =>
+  return(data.map((employee =>
     <p>{employee.id} - {employee.firstname} {employee.lastname}</p>)));
 }
 
+const handleClearAll = () => (
+  console.log ("Clear All Button has been clicked."),
+  alert("ALERT"),
+  data = [] 
+)
+
 function App() {
   return(<div>
-  <p>HELLO WORLD</p>
-  <section>{<ul>{ListWriter()}</ul>}</section>
-  <section>{ListWriter2()}</section>
+    <EmployeeList employees={data} />
+    <button onClick={handleClearAll}>Clear All</button>
   </div>)
 }
 

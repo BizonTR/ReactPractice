@@ -11,6 +11,7 @@ function App() {
   // 2. olan employees={list} ataması ise yukarıdaki const [list, setList] = useState(data) ile ilişkili. başlangıç değeri "data" olan bir değişkeni "list" adı altında tanımlamış ve yapılacak bir değişiklik durumunda setList ile bu yeni "list"e ulaşıyoruz.
   return(<div>
     <EmployeeList movedlist={liste} employees={list} changedList={setList}/>
+    <p>{data.length}</p>
   </div>)
 }
 

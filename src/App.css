@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+#IncDecButton{
+  font-size: 40px;
+  background-color: black;
+  color: #FFF;
+  margin: 5px;
+  padding: 15px;
+  text-align: left;
+  border-radius: 10px;
+  border-color: red;
+  border-width: 5px;
+}

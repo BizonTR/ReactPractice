@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import EmployeeList from '../employeeList/EmployeeList'
 
-export default function Employee({employee}) {
+export default function Employee({employee, handleClearOne}) {
   return (
     <div>
         {employee.firstname} {employee.lastname}
-        <button>Remove</button>
+        <button onClick={() => handleClearOne(employee.id)}>Remove</button>
     </div>
   )
 }

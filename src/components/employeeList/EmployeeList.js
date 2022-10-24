@@ -1,6 +1,7 @@
 //rfc snippeti kullanılabilir.
 import React from 'react'
 import Employee from '../employee/Employee'
+import EmployeeAdd from '../employeeAdd/EmployeeAdd'
 
 export default function EmployeeList(props) {
   const handleClearAll = () => (
@@ -20,8 +21,9 @@ export default function EmployeeList(props) {
       <button onClick={handleClearAll}>Clear All</button>
       <button onClick={() => handleClearOne(1)}>ClearOne</button>
       {
-      props.movedlist.map((item) => (<p>{item}</p>))
+        props.movedlist.map((item) => (<p>{item}</p>))
       }
+      <EmployeeAdd employees = {props.employees} changedList = {props.changedList}/>
     </div>
   )
 }

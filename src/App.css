@@ -48,3 +48,10 @@
   border-color: red;
   border-width: 5px;
 }
+h3{
+  display: inline-block;
+}
+.card{
+  width: 2px;
+  
+}

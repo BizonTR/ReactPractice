@@ -16,7 +16,7 @@ export default function EmployeeList(props) {
     <div>
       EmployeeList {props.employees.length}
       {
-        props.employees.map((emp) => (<div><Employee employee={emp} handleClearOne={handleClearOne} /></div>))
+        props.employees.map((emp) => (<div><Employee employee={emp} handleClearOne={handleClearOne} setSelectedEmployee={props.setSelectedEmployee}/></div>))
       }
       <button onClick={handleClearAll}>Clear All</button>
       <button onClick={() => handleClearOne(1)}>ClearOne</button>

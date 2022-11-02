@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import AppContext from '../../contexts/AppContext'
 
-export default function EmployeeUpdate({ employees, changedList, selectedEmployee, setSelectedEmployee }) {
+export default function EmployeeUpdate() {
+    const { employees, changedList, selectedEmployee, setSelectedEmployee } = useContext(AppContext)
 
     const handleChange = (e) =>{
         setSelectedEmployee({

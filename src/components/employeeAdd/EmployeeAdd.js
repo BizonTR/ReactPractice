@@ -1,15 +1,18 @@
 import React from 'react'
+import { useContext } from 'react';
+import AppContext from '../../contexts/AppContext';
 
-export default function EmployeeAdd(props) {
+export default function EmployeeAdd() {
+    const {employees, changedList, setSelectedEmployee, selectedEmployee} = useContext(AppContext)
     const handleOnSubmit = (e) => {
         e.preventDefault();
         const newEmployee = {
-            id: props.employees.length + 1,
+            id: employees.length + 1,
             firstname: e.target.firstname.value,
             lastname: e.target.lastname.value
         }
         console.log(newEmployee.firstname, newEmployee.lastname)
-        props.changedList([...props.employees, newEmployee])
+        changedList([...employees, newEmployee])
     }
     return (
         <div className='container-fluid'>

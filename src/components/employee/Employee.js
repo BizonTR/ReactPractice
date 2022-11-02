@@ -1,7 +1,3 @@
-import React, { useState } from 'react'
-import EmployeeAdd from '../employeeAdd/EmployeeAdd'
-import EmployeeList from '../employeeList/EmployeeList'
-
 export default function Employee({employee, handleClearOne, setSelectedEmployee}) {
 
   const handleSelectedEmployee = (emp) => {

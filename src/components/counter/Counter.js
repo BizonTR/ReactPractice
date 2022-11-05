@@ -21,9 +21,9 @@ export default function Counter() {
     }
     return (
         <div>
-            <h1>
+            <p id='number'>
             {changedNumber}
-            </h1>
+            </p>
             <button id='IncDecButton' onClick={handleIncrease}>Increase</button>
             <button id='IncDecButton' onClick={handleDecrease}>Decrease</button>
         </div>

@@ -4,7 +4,6 @@ import Counter from './components/counter/Counter';
 import EmployeeList from './components/employeeList/EmployeeList';
 import EmployeeUpdate from './components/employeeUpdate/EmployeeUpdate';
 import AppContext from './contexts/AppContext';
-import { data } from './data';
 
 function App() {
   const {appName, list, setList, setSelectedEmployee, selectedEmployee} = useContext(AppContext)
@@ -14,9 +13,8 @@ function App() {
     <div>
       <h1>{appName}</h1>
       <EmployeeList/>
-      <p>{data.length}</p>
+      <EmployeeUpdate />
       <Counter />
-      <EmployeeUpdate  selectedEmployee={selectedEmployee} setSelectedEmployee={setSelectedEmployee} employees={list} changedList={setList}/>
     </div>)
 }
 

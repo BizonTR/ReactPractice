@@ -17,13 +17,13 @@ export default function EmployeeList() {
   //(App.js 25. satır ile ilişkili) => Burada da App.js'den gelen employees'i karşılamamız gerekir. bu sınıftaki fonksiyona parametre olarak "props" vererek bu sınıfa başka yerlerden gönderilen verileri "props." şeklinde kullanabiliriz.
   return (
     <div>
-      EmployeeList {employees.length}
+      EmployeeList ({employees.length} Members)
       {
         employees.map((emp) => (<div><Employee employee={emp} handleClearOne={handleClearOne} setSelectedEmployee={setSelectedEmployee}/></div>))
       }
       <button onClick={handleClearAll}>Clear All</button>
       <button onClick={() => handleClearOne(1)}>ClearOne</button>
-      <EmployeeAdd employees = {employees} changedList = {changedList}/>
+      <EmployeeAdd />
     </div>
   )
 }

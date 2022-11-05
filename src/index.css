@@ -17,3 +17,7 @@ h1{
   background: linear-gradient(rgba(0,0,0,10),rgba(255,255,255,10));
   font-size: 50px;
 }
+
+#number{
+  font-size: 40px;
+}

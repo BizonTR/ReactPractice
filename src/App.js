@@ -1,6 +1,8 @@
 import { useContext, useState } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Counter from './components/counter/Counter';
+import EmployeeAdd from './components/employeeAdd/EmployeeAdd';
 import EmployeeList from './components/employeeList/EmployeeList';
 import EmployeeUpdate from './components/employeeUpdate/EmployeeUpdate';
 import AppContext from './contexts/AppContext';
@@ -12,9 +14,22 @@ function App() {
   return (
     <div>
       <h1>{appName}</h1>
-      <EmployeeList/>
-      <EmployeeUpdate />
-      <Counter />
+
+      <ul>
+        <li><Link to="/">HomePage</Link></li>
+        <li><Link to="/employees">Employees</Link></li>
+        <li><Link to="/employees/add">Employee Add</Link></li>
+        <li><Link to="/counter">Counter</Link></li>
+        <li><Link to="/employees/update">Employee Update</Link></li>
+      </ul>
+
+      <Routes>
+        <Route path='/employees' element={<EmployeeList />}></Route>
+        <Route path='/counter' element={<Counter />}></Route>
+        <Route path='/employees/update/:id' element={<EmployeeUpdate />}></Route>
+        <Route path='/employees/add' element={<EmployeeAdd />}></Route>
+        <Route path='/employees/update' element={<EmployeeUpdate />}></Route>
+      </Routes>
     </div>)
 }
 

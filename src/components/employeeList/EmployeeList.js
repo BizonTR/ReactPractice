@@ -7,10 +7,10 @@ import EmployeeAdd from '../employeeAdd/EmployeeAdd'
 export default function EmployeeList() {
   const {employees, changedList, setSelectedEmployee} = useContext(AppContext)
 
-  const handleClearAll = () => (
-    alert("ALERT"),
-    changedList([])
-  )
+  const handleClearAll = () => {
+    alert("ALERT");
+    changedList([]);
+  }
   const handleClearOne = (id) => {
     changedList(employees.filter(emp => emp.id!==id))
   }
@@ -23,7 +23,6 @@ export default function EmployeeList() {
       }
       <button onClick={handleClearAll}>Clear All</button>
       <button onClick={() => handleClearOne(1)}>ClearOne</button>
-      <EmployeeAdd />
     </div>
   )
 }
